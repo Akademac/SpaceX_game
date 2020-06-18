@@ -6,13 +6,35 @@
     <link rel='stylesheet' type='text/css' href='main.css' />
     <title>FalconX</title>
 </head>
-<body>
-    <div id='rocket'>
-        <img src='fire.png' id='fire' alt='Not found' />
+<body id='body'>
+    <div id='counter'></div>
+    <div id='game_over'>
+        <div id='score'>
+            <div>Game Over
+                <p id='score_p'></p>
+                <btn id='reload'>Reload</btn>
+            </div>
+        </div>
     </div>
+    <div id='ship'> 
+        <img src='fire2.gif' id='ship_fire' class='ship_fire' alt='Not found' />
+    </div> 
+    
+    <div id='rocket'> 
+        <img src='fire2.gif' id='rocket_fire' class='rocket_fire' alt='Not found' />
+        <img src='explosion_2.png' id='rocket_explosion' class='rocket_explosion' alt='Not found' />
+    </div> 
+    
+    
     <audio id='rocket_sound'>
         <source src='rocket_sound.wav' />
     </audio>
+
+    <audio id='explosion_sound'>
+        <source src='explosion.mp3' />
+    </audio>
+
+    <!-- <div id='tip'>kl</div> -->
 
     <img src='iss.webp' alt='Not found!' id='iss' />
 

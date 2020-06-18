@@ -1,47 +1,183 @@
 
 body {
-    background: url('space.webp');
+    background: url('land.jpg');
     background-position: center;
     background-size: cover;
     overflow: hidden;
+    background-repeat: no-repeat;
+    height: 100vh;
+    width: 100%;
+    margin: 0px;
 }
 
-#rocket {
+#counter {
+    width: 5rem;
+    height: 5rem;
+    border: 2.2px dotted white;
+    border-radius: 5px;
+    color: white;
+    font-size: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    padding: .5rem;
+    margin: 2rem;
+}
+
+#ship {
     width: 3rem;
     height: 3rem;
-    background: url('rocket_2.png');
+    background: url('ship_2.png');
     background-position: center;
     background-size: cover;
     position: absolute;
-    /* margin: 250px auto; */
-    /* margin-right: 2px;
-    margin-left: 2px;
-    margin-top: 2px;
-    margin-bottom: 2px; */
-    /* transform: rotate(-10deg); */
+    left: 50%;
+    top: 90%;
+    display: none;
 }
-/* 
-#btn {
-    background: url('rocket.png');
-    width: 3rem;
-    padding: .5rem;
-    height: 1rem;
-    margin-top: 20rem;
-    cursor: pointer;
-    position: absolute;
-} */
 
-#fire {
+#ship_fire {
     position: absolute;
     width: 1.5rem;
     height: 2rem;
     top: 30px;
-    left: 18px;
+    left: 16px;
     transform: translate(18, 30);
     transform: rotateX(180deg);
     display: none;
 }
 
+
+#rocket {
+    width: 8rem;
+    height: 8rem;
+    background: url('rocket.png');
+    background-position: center;
+    background-size: cover;
+    position: absolute;
+    left: 45%;
+    top: 80%;
+    /* display: none; */
+}
+
+#rocket_fire {
+    position: absolute;
+    width: 1.5rem;
+    height: 2rem;
+    top: 120px;
+    left: 53px;
+    transform: translate(18, 30);
+    transform: rotateX(180deg);
+    display: none;
+}
+
+#rocket_explosion {
+    width: 8rem;
+    height: 8rem;
+    transition: 2s all;
+    display: none;
+    animation-name: explosion;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: 1;
+    animation-duration: 3s;
+} 
+
+@keyframes explosion {
+    0% {
+        transform: scale(0);
+    }
+    30% {
+        transform: scale(2);
+    } 
+    70% {
+        transform: scale(4);
+    }
+    100% {
+        transform: scale(6);
+    }
+}
+
+#game_over {
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    /* display: flex; */
+    justify-content: center;
+    align-items: center;
+    display: none;
+}
+
+#score {
+    width: 50rem;
+    height: 30rem;
+    border: 2px dotted white;
+    border-radius: 10px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 4rem;
+    color: white;
+    font-weight: bold;
+}
+
+#score_p {
+    font-size: 2rem;
+    text-align: center;
+}
+
+#reload {
+    width: 8rem;
+    height: 3rem;
+    background-color: white;
+    color: black;
+    font-weight: bold;
+    text-align: center;
+    margin: 2px auto;
+    border-radius: 5px;
+    padding: 5px;
+    font-size: 2rem;
+    display: block;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+#reload:hover {
+    background-color: black;
+    color: white;
+    transition: 2s all;
+}
+
+
+
+
+
+
+
+
+
+
+
 #iss {
     float: right;
+    display: none;
+
 }
+
+
+
+/* Ship*/ 
+
+/* 
+#tip {
+    width: 10px;
+    height: 10px;
+    background: red;
+    position: relative;
+    display: inline;
+    margin-left: 70%;
+    margin-top: 50%;
+} */
